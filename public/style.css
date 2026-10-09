@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    background: #1f4e79;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header p {
+    margin: 0;
+}
+
+main {
+    padding: 35px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+#searchInput {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+#searchInput:focus {
+    outline: 2px solid #1f4e79;
+}
+
+.primary-button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #1f4e79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.primary-button:hover {
+    transform: scale(1.03);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.patient-list {
+    display: grid;
+    gap: 15px;
+}
+
+.patient-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.patient-card h3 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+.patient-card p {
+    margin: 7px 0;
+}
+
+.delete-button {
+    margin-top: 10px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #c0392b;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    opacity: 0.85;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}
+
+/* Styles the Edit Patient button. */
+.edit-button {
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #2980b9;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Adds a hover effect to the Edit button. */
+.edit-button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* Arranges dashboard summary cards in a responsive grid. */
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Styles each dashboard summary card. */
+.summary-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #1f4e79;
+}
+
+/* Styles summary card headings. */
+.summary-card h3 {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Highlights the summary values. */
+.summary-card p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f4e79;
+}
+
+/* Adapts the dashboard to smaller screens. */
+@media (max-width: 700px) {
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+    }
+}

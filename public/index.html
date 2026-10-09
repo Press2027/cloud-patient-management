@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Patient Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Cloud Patient Management</h1>
+            <p>CSE 310 - Module 3: Cloud Databases</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Patient form -->
+         <!-- Dashboard summary -->
+            <section class="dashboard-summary">
+
+                <div class="summary-card">
+                    <h3>Total Patients</h3>
+                    <p id="totalPatients">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Cloud Database</h3>
+                    <p>MongoDB Atlas</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>API Status</h3>
+                    <p id="apiStatus">Checking...</p>
+                </div>
+
+            </section>
+
+            
+        <section class="card">
+
+            <h2>Add New Patient</h2>
+
+            <form id="patientForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input
+                            type="number"
+                            id="age"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+
+                        <select id="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diagnosis">Diagnosis</label>
+                        <input
+                            type="text"
+                            id="diagnosis"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input
+                            type="text"
+                            id="address"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyContact">
+                            Emergency Contact
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="emergencyContact"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Add Patient
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- Patient list -->
+        <section class="card">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Patient Records</h2>
+                    <p>Patients stored in MongoDB Atlas</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search patients..."
+                >
+
+            </div>
+
+            <div id="patientList" class="patient-list">
+                <p>Loading patients...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            CSE 310 Cloud Databases |
+            Cloud Patient Management System
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
